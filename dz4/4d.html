@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 1px solid;
+        width: 510px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    button {
+        color: blue;
+    }
+
+    .Table1 {
+        width: 510px;
+        margin: auto;
+        border-collapse: collapse;
+
+    }
+
+    .Table2 {
+        width: 400px;
+        margin: auto;
+        border-collapse: collapse;
+        font-size: 30px;
+
+
+    }
+
+    th {
+        text-align: left;
+        padding: 10px;
+
+
+    }
+
+    td {
+        text-align: right;
+        padding: 10px;
+
+    }
+</style>
+
+<body>
+    <div>
+        <h1>HTML table basics</h1>
+        <form action="https://developer.mozilla.org/ru/docs/Learn/HTML/Tables/Basics" target="_blank">
+            <button><u>Overview: Tables</u></button>
+        </form>
+        <p>This article gets you started with HTML tables, covering the very basics such as rows, cells, headings,
+            making cells span multiple columns and rows, and how to group together all the cells in a column for styling
+            purposes.</p>
+        <table border="1" class="Table1">
+
+            <tr>
+                <th>Prerequisites:</th>
+                <td>The basics of HTML (see <span> <a href="https://www.w3schools.com/html/html_intro.asp"
+                            ;>Introduction to HTML</a></span>).</td>
+            </tr>
+            <tr>
+                <th>Prerequisites: </th>
+                <td>Objective: To gain basic familiarity with HTML tables.</td>
+            </tr>
+        </table>
+        <h2>What is a table?</h2>
+        <p>A table is a structured set of data made up of rows and columns (<b>tabular data</b>). A table allows you to
+            quickly
+            and easily look up values that indicate some kind of connection between different types of data, for example
+            a
+            person and their age, or a day of the week, or the timetable for a local swimming pool.
+        </p>
+        <table border="1" class="Table2">
+            <tr style="background-color: #bec0bf">
+                <th>Person</th>
+                <th>Age</th>
+
+            </tr>
+            <tr>
+                <th style="background-color: #dcdcdc">Chris</th>
+                <td>38</td>
+            </tr>
+            <tr>
+                <th style="background-color: #dcdcdc">Dennis</th>
+                <td>45</td>
+            </tr>
+            <tr>
+                <th style="background-color: #dcdcdc">Sarah</th>
+                <td>29</td>
+            </tr>
+            <tr>
+                <th style="background-color: #dcdcdc">Karen</th>
+                <td>47</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

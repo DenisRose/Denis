@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userfam = prompt("Введите Фамилию");
+        let username = prompt("Введите Имя");
+        let userfath = prompt("Введите Отчество");
+        let userage = prompt("Введите возраст в годах");
+        let gender = confirm("Ваш пол - мужской?");
+        if (gender) {
+            alert("Ваше ФИО: " + userfam  + username  + userfath + "\n" + "Ваш возратс в годах: " + userage + "\n" + "ваш возраст в днях: " + userage * 365 + "\n" + "Ваш пол: мужской"  );
+
+        } else {
+            alert("Женский");
+        }
+
+        document.write("<h1>Привет, " + username + "</h1>");
+    </script>
+</body>
+
+</html>

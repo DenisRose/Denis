@@ -15,12 +15,21 @@
         let userfath = prompt("Введите Отчество");
         let userage = prompt("Введите возраст в годах");
         let gender = confirm("Ваш пол - мужской?");
+        let genderName = "";
+        const ageIn5years = Number(userage) + 5;
         if (gender) {
-            alert("Ваше ФИО: " + userfam + username + userfath + "\n" + "Ваш возратс в годах: " + userage + "\n" + "ваш возраст в днях: " + userage * 365 + "\n" + "Ваш пол: мужской");
-
+            genderName = "мужской"
         } else {
-            alert("Ваше ФИО: " + userfam + username + userfath + "\n" + "Ваш возратс в годах: " + userage + "\n" + "ваш возраст в днях: " + userage * 365 + "\n" + "Ваш пол: женский");
+            genderName = "женский"
         }
+
+        alert(`
+                Ваше ФИО: ${userfam} ${username} ${userfath}
+                Ваш возраст в годах: ${userage}
+                Ваш возраст в днях: ${userage * 365}
+                Через 5 лет вам будет: ${Number(userage) + 5}
+                Ваш пол: ${genderName}
+                Вы на пенсии: ${userage >= 65 ? "да" : "нет"}`);
 
 
     </script>

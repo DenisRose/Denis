@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        html {
+            background-color: rgba(223, 249, 250, 0.932);
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .todo {
+            padding: 20px;
+            margin: 0 auto;
+            border: 1px solid red;
+            background-color: rgb(247, 243, 243);
+
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: left;
+
+
+            margin: 10px;
+
+        }
+
+        ul:hover {
+
+            cursor: pointer;
+        }
+
+        .selected_item {
+            background-color: rgb(173, 173, 173);
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+            let btn = document.querySelector(".todo_controls button");
+            btn.addEventListener("click", function () {
+                let input = document.querySelector(".todo_controls input");
+                let inputValue = input.value.trim();
+
+                if (!inputValue) {
+                    input.focus();
+                    return;
+                }
+
+                input.value = "";
+
+
+                let ul = document.querySelector(".todo_list ul");
+                let newItem = document.createElement("li");
+                newItem.innerHTML = inputValue + "<input type='button' Value ='X'/>", function () {
+                    
+                };
+                
+                
+                
+
+                
+
+                newItem.addEventListener("click", function () {
+                    let allItems = ul.querySelectorAll("li");
+                    allItems.forEach(function (item) {
+                        item.classList.remove("selected_item");
+                    });
+
+                    newItem.classList.add("selected_item")
+                });
+
+             
+                
+                
+                    
+                
+
+
+                //newItem.textContent = inputValue; - Без кнопки
+
+                ul.appendChild(newItem);
+
+
+
+                //ul.innerHTML += `<li>${inputValue}</li>`;
+                //newItem.addEventListener("click", function(){
+                // let allItems = ul.querySelector("li")
+                // allItems.forEach(function(item){ //Тут закончил тест..
+                //});
+                //})
+            });
+        })
+    </script>
+    <div class="todo">
+        <h1>TODO List</h1>
+        <div class="todo_controls">
+            <input type="text" name="name" placeholder="Введите название дела">
+            <button>добавить</button>
+        </div>
+        <div class="todo_list">
+            <ul>
+
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

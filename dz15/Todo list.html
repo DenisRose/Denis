@@ -70,13 +70,16 @@
                 let ul = document.querySelector(".todo_list ul");
                 let newItem = document.createElement("li");
                 newItem.innerHTML = inputValue + "<input type='button' Value ='X'/>", function () {
-                    
                 };
-                
-                
-                
+                newItem.querySelector("input").addEventListener("click", function (event) {
+                    if (event.target.closest("input"))
+                        newItem.remove();
+                    return;
+                });
 
-                
+
+
+
 
                 newItem.addEventListener("click", function () {
                     let allItems = ul.querySelectorAll("li");
@@ -87,11 +90,11 @@
                     newItem.classList.add("selected_item")
                 });
 
-             
-                
-                
-                    
-                
+
+
+
+
+
 
 
                 //newItem.textContent = inputValue; - Без кнопки
